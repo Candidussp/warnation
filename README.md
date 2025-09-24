@@ -43,9 +43,9 @@ Build fleets, buy upgrades, and dominate the battlefield!
 
 ## Features
 
-- Group and 1v1 rannged battles
+- Group and 1v1 ranged battles
 - Stats: health, energy, ammo, exp, cash, gold
-- Army training, purchases, and losses after battle
+- Army training, purchases, and loses after battle
 - Mini games: SP`s Riddle, Russian rouletTe , Spy Interrogation 
 - Real-time multiplayer
 
@@ -58,7 +58,7 @@ Build fleets, buy upgrades, and dominate the battlefield!
 - Begginer default Max stats, H=300, E=500, A= 20
 - Army training and purchase System**
 - Invasion: Battle logic and ary loses in battle if VICTORY, chances of critical hit,dodge,random exp earn per attack, 
-- steal defenders players cash per ATTACK. DEFENDER auto counters (win or lose) . 
+- Steal defending players cash per ATTACK. DEFENDER auto counters (win or lose) . 
 - Each attack costs 1 ammo. if 0 ammo, out of Ammo. if health less than 15%, health too low, cant attack.
 - Battle outcome: ATTACKERS total attack VS Defenders total defence, exp for attack on bots random 5-15, attack on players random 8-35. 
 - No rewards if defeated.. just ship army and hp lose depends on the damage taken. 
