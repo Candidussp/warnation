@@ -61,7 +61,7 @@ Build fleets, buy upgrades, and dominate the battlefield!
 - Steal defending players cash per ATTACK. DEFENDER auto counters (win or lose) . 
 - Each attack costs 1 ammo. if 0 ammo, out of Ammo. if health less than 15%, health too low, cant attack.
 - Battle outcome: ATTACKERS total attack VS Defenders total defence, exp for attack on bots random 5-15, attack on players random 8-35. 
-- No rewards if defeated.. just ship army and hp lose depends on the damage taken. 
+- No rewards if defeated.. Army and hp lose depends on the damage taken. 
 
 
 ## NOTE 
