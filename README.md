@@ -57,7 +57,7 @@ Build fleets, buy upgrades, and dominate the battlefield!
 - Player Stats Rgeneration: Health/Energy/Ammo regeneration. H= +10/3mins , E= +10/3mins, A= +1/3mins
 - Begginer default Max stats, H=300, E=500, A= 20
 - Army training and purchase System**
-- Invasion: Battle logic and ary loses in battle if VICTORY, chances of critical hit,dodge,random exp earn per attack, 
+- Invasion: Battle logic and army loses in battle if VICTORY, chances of critical hit,dodge,random exp earn per attack, 
 - Steal defending players cash per ATTACK. DEFENDER auto counters (win or lose) . 
 - Each attack costs 1 ammo. if 0 ammo, out of Ammo. if health less than 15%, health too low, cant attack.
 - Battle outcome: ATTACKERS total attack VS Defenders total defence, exp for attack on bots random 5-15, attack on players random 8-35. 
@@ -67,4 +67,4 @@ Build fleets, buy upgrades, and dominate the battlefield!
 ## NOTE 
 - Warnation is a game under development, new ideas, partners.. are always welcome, there are alot more other features that have`nt been talked about, but will be mentioned along the way.
 - At the moment, Will take it step by step to make sure we get the game running well like it should. 
-- Contact the author ejembicandidus@gmail.com+
+- Contact the author ejembicandidus@gmail.com
