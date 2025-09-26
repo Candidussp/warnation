@@ -102,17 +102,47 @@ $player = $stmt->fetch();
     margin-top: 12px;
     min-height: 24px;
   }
+  .page-tabs {
+  display: inline-block;
+  background: #001f3f; /* dark blue */
+  border-radius: 12px;
+  padding: 5px 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.page-tabs .tab-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.page-tabs .tab-link:hover {
+  background: #004080;
+}
+
+.page-tabs .tab-link.active {
+  background: #0074D9;
+  font-weight: bold;
+}
+
 </style>
 </head>
 <body>
 
-<a class="home" href="Homepage.php">← HOME</a>
+</div> <!-- Navigation Tabs -->
+<div class="page-tabs" style="margin: 15px 0; text-align: center;">
+ <a class="home" href="Homepage.php">← HOME</a> 
+  <a href="Units.php" class="tab-link">Units</a>
+  <a href="Fleets.php" class="tab-link">Fleets</a>
+  <a href="SWMDS.php" class="tab-link">SWMDS</a>
+</div>
+
+<hr>
 <h1>UNITS SHOP</h1>
 
-<center><h1> <a href="units.php"><button>BARRACKS</button> </a> <a href="fleets.php">
-   <button> WAR VEHICLES</button>
-  </a></h1</center>
-  
 <div id="playerStats">
   Level: <strong id="plLevel">0</strong> &nbsp;|&nbsp;
   Cash: <strong id="plCash">0</strong> &nbsp;|&nbsp;
@@ -318,6 +348,14 @@ $player = $stmt->fetch();
   window.addEventListener("storage", (e) => {
     if (e.key === STORE_KEY || e.key === "playerStats" || e.key === "warnation_player") {
       renderPage();
+    }
+  });
+  
+  // Highlight current page tab
+  const current = location.pathname.split("/").pop();
+  document.querySelectorAll(".page-tabs .tab-link").forEach(link => {
+    if(link.getAttribute("href") === current){
+      link.classList.add("active");
     }
   });
 </script>
