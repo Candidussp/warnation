@@ -53,18 +53,49 @@ $player = $stmt->fetch();
     margin-left: auto;
     margin-right: auto;
   }
+  .page-tabs {
+  display: inline-block;
+  background: #001f3f; /* dark blue */
+  border-radius: 12px;
+  padding: 5px 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.page-tabs .tab-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.page-tabs .tab-link:hover {
+  background: #004080;
+}
+
+.page-tabs .tab-link.active {
+  background: #0074D9;
+  font-weight: bold;
+}
+
 </style>
 </head>
 <body>
 
-<div class="top-links">
-  <a class="home" href="Homepage.php">← HOME</a>
-  <a class="home" 
+
+</div> <!-- Navigation Tabs -->
+<div class="page-tabs" style="margin: 15px 0; text-align: center;">
+ <a class="home" href="Homepage.php">← HOME</a> 
+  <a href="Units.php" class="tab-link">Units</a>
+  <a href="Fleets.php" class="tab-link">Fleets</a>
+  <a href="SWMDS.php" class="tab-link">SWMDS</a>
 </div>
 
-<center><h1> <a href="units.php"><button>BARRACKS</button> </a> <a href="fleets.php">
-   <button> WAR VEHICLES</button>
-  </a></h1</center>
+<hr>
+
+
+<h1> BARRACKS</h1>
 
 <div class="stats">
   <span>Player Level: <strong id="plLevel">1</strong></span> &nbsp;|&nbsp;
@@ -537,13 +568,22 @@ function renderAll() {
 
 renderAll();
 </script>
+<script>
+  // Highlight current page tab
+  const current = location.pathname.split("/").pop();
+  document.querySelectorAll(".page-tabs .tab-link").forEach(link => {
+    if(link.getAttribute("href") === current){
+      link.classList.add("active");
+    }
+  });
+</script>
+
 
 <!-- ... existing content above ... -->
 
 <div id="queueList" class="small">No tasks running.</div>
 
-<div style="text-align:center; margin-top: 40px;">
- 
+
 </div>
 </div>
 
