@@ -141,11 +141,45 @@ $player = $stmt->fetch();
     left: 50%;
     transform: translateX(-50%);
   }
+  .page-tabs {
+  display: inline-block;
+  background: #001f3f; /* dark blue */
+  border-radius: 12px;
+  padding: 5px 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.page-tabs .tab-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.page-tabs .tab-link:hover {
+  background: #004080;
+}
+
+.page-tabs .tab-link.active {
+  background: #0074D9;
+  font-weight: bold;
+}
+
 </style>
 </head>
 <body>
 
-<a class="home" href="Homepage.php">← HOME</a>
+</div> <!-- Navigation Tabs -->
+<div class="page-tabs" style="margin: 15px 0; text-align: center;">
+ <a class="home" href="Homepage.php">← HOME</a> 
+  <a href="Units.php" class="tab-link">Units</a>
+  <a href="Fleets.php" class="tab-link">Fleets</a>
+  <a href="SWMDS.php" class="tab-link">SWMDS</a>
+</div>
+
+<hr>
 <h1>SWMDs - Strategic War Machines & Defenses</h1>
 
 <table>
@@ -297,6 +331,15 @@ $player = $stmt->fetch();
   renderOwnedSwmds();
 
   spinBtn.addEventListener('click', spinWheel);
+</script>
+<script>
+  // Highlight current page tab
+  const current = location.pathname.split("/").pop();
+  document.querySelectorAll(".page-tabs .tab-link").forEach(link => {
+    if(link.getAttribute("href") === current){
+      link.classList.add("active");
+    }
+  });
 </script>
 
 
