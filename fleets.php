@@ -141,7 +141,7 @@ $player = $stmt->fetch();
 </div>
 
 <hr>
-<h1>UNITS SHOP</h1>
+<h1>FLEET SHOP</h1>
 
 <div id="playerStats">
   Level: <strong id="plLevel">0</strong> &nbsp;|&nbsp;
